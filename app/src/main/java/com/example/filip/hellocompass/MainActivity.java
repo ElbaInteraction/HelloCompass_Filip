@@ -15,6 +15,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+
+    // -hej dee-te-ea ehr en KåmmentAURUS
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
