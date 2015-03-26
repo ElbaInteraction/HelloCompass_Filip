@@ -3,4 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="button_start">Start Compass</string>
+    <string name="text_welcome">This app is made by Filip Bontin, fbontin @ Github.</string>
+    <string name="title_activity_display_compass">DisplayCompassActivity</string>
 </resources>
