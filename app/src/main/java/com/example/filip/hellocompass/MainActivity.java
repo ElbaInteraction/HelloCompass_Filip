@@ -18,9 +18,16 @@ public class MainActivity extends ActionBarActivity {
 
     public void compass(View view){
         Intent intent = new Intent(this, DisplayCompassActivity.class);
+        intent.putExtra("INCLUDE_KANYE", false);
         startActivity(intent);
     }
 
+
+    public void compassKanye(View view) {
+        Intent intent = new Intent(this, DisplayCompassActivity.class);
+        intent.putExtra("INCLUDE_KANYE", true);
+        startActivity(intent);
+    }
 
 
     @Override
@@ -44,4 +51,5 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

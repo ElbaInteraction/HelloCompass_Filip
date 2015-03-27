@@ -6,4 +6,5 @@
     <string name="button_start">Start Compass</string>
     <string name="text_welcome">This app is made by Filip Bontin, fbontin @ Github.</string>
     <string name="title_activity_display_compass">DisplayCompassActivity</string>
+    <string name="button_start_kanye">Start compass with surprise</string>
 </resources>

@@ -12,6 +12,15 @@
         android:onClick="compass"
         />
 
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_start_kanye"
+        android:onClick="compassKanye"
+        />
+
+
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
