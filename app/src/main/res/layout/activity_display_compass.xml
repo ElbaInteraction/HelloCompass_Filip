@@ -2,7 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.filip.hellocompass.DisplayCompassActivity">
+    tools:context="com.example.filip.hellocompass.DisplayCompassActivity"
+    >
+
+
 
     <com.example.filip.hellocompass.DisplayCompassActivity.CustomDrawableView
         android:layout_width="fill_parent"
