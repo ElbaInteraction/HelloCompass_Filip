@@ -40,7 +40,7 @@ public class DisplayCompassActivity extends Activity implements SensorEventListe
             Intent intent = getIntent();
             includeKanye = intent.getBooleanExtra("INCLUDE_KANYE", true);
 
-            if(includeKanye) {
+            if (includeKanye) {
                 Resources res = getResources();
                 kanye = BitmapFactory.decodeResource(res, R.drawable.kanye_head);
                 kanye.prepareToDraw();
@@ -55,17 +55,17 @@ public class DisplayCompassActivity extends Activity implements SensorEventListe
 
             boolean drawKanye = false; //decides if Kanye is drawn or not.
             float azimut_deg = 0;
-            if(azimut != null){
+            if (azimut != null) {
                 azimut_deg = -azimut * 360 / (2 * 3.14159f);
                 drawKanye = azimut_deg < 110 && azimut_deg > 70 && includeKanye;
             }
 
-            if(drawKanye){ //drawKanye or not
+            if (drawKanye) { //drawKanye or not
 
                 int blinkspeed = 5;
                 paint.setStyle(Style.FILL);
 
-                if(blinks <= blinkspeed){
+                if (blinks <= blinkspeed) {
                     paint.setColor(Color.RED);
 
                     canvas.drawRect(0, 0, width, height, paint); //background
@@ -77,7 +77,7 @@ public class DisplayCompassActivity extends Activity implements SensorEventListe
                 paint.setStyle(Style.STROKE);
                 blinks++;
 
-                if(blinks >= blinkspeed * 2){
+                if (blinks >= blinkspeed * 2) {
                     blinks = 0;
                 }
 
@@ -103,20 +103,20 @@ public class DisplayCompassActivity extends Activity implements SensorEventListe
             // Rotate the canvas with the azimut
             if (azimut != null) {
 
-                if(drawKanye){
+                if (drawKanye) {
                     paint.setColor(Color.BLACK);
-                    paint.setTextSize(height/6);
-                    canvas.drawText("KANYE", 0, height/6, paint);
+                    paint.setTextSize(height / 6);
+                    canvas.drawText("KANYE", 0, height / 6, paint);
                     paint.setTextSize(40f);
                 }
 
                 canvas.rotate(azimut_deg, centerx, centery); //rotate according to azimut.
 
                 if (drawKanye) {
-                    canvas.drawBitmap(kanye, 0, width/2 -width/10, paint);
+                    canvas.drawBitmap(kanye, 0, width / 2 - width / 10, paint);
                 }
             }
-            if(!drawKanye) {
+            if (!drawKanye) {
                 paint.setColor(Color.DKGRAY);
                 canvas.drawLine(centerx, centery + width / 3, centerx, centery - width / 3, paint);
                 canvas.drawLine(centerx + width / 3, centery, centerx - width / 3, centery, paint);
